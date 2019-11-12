@@ -1,0 +1,224 @@
+﻿@model IEnumerable<PPC_Project.Models.Property>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PropertyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PropertyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Area)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BedRoom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BathRoom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InstallmentRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Avatar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Album)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.District.DistrictName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PropertyStatu.PropertyStatusName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PropertyType.PropertyTypeName)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Area)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BedRoom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BathRoom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstallmentRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Avatar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Album)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.District.DistrictName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyStatu.PropertyStatusName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyType.PropertyTypeName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            </td>
+        </tr>
+    }
+
+    </table>*@
+<section class="panel">
+    <header class="panel-heading">
+        Đơn đặt hàng
+    </header>
+    <div class="panel-body">
+        <div class="adv-table editable-table ">
+            <div class="space15"></div>
+            <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PropertyCode)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PropertyName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Description)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Address)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Area)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.BedRoom)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.BathRoom)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Price)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.InstallmentRate)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Avatar)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Album)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.District.DistrictName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PropertyStatu.PropertyStatusName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PropertyType.PropertyTypeName)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PropertyCode)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PropertyName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Address)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Area)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.BedRoom)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.BathRoom)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Price)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.InstallmentRate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Avatar)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Album)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.District.DistrictName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PropertyStatu.PropertyStatusName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PropertyType.PropertyTypeName)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

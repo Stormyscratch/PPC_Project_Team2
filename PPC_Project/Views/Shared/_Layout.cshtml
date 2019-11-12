@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-reset.css" rel="stylesheet" />
+    <link href="~/Content/DT_bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/site.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/style-responsive.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <div class="header white-bg">
+        <div class="sidebar-toggle-box">
+            <div data-original-title="Ẩn / Hiện" data-placement="right" class="icon-reorder tooltips"></div>
+        </div>
+        <!--logo start-->
+        <a href="/" class="logo">CÔNG TY BẤT ĐỘNG SẢN<span>PPC</span></a>
+        <a href="/"><img src="img/PPCLogo.png" height="50" width="100" /></a>
+
+
+
+    </div>
+
+    <aside>
+        <div id="sidebar" class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu" id="nav-accordion">
+
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="icon-th-list"></i>
+                        <span>Quản lý bất động sản</span>
+                    </a>
+                    <ul class="sub">
+                        <li>@Html.ActionLink("Xem danh sách", "Index", "Properties")</li>
+                    </ul>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="icon-shopping-cart"></i>
+                        <span>Hợp đồng đầy đủ</span>
+                    </a>
+                    <ul class="sub">
+                        <li>@Html.ActionLink("Xem danh sách", "Index", "FullContracts", new { area = "" }, null)</li>
+                    </ul>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="icon-shopping-cart"></i>
+                        <span>Hợp đồng trả góp</span>
+                    </a>
+                    <ul class="sub">
+                        <li>@Html.ActionLink("Xem danh sách", "Index", "InstallmentContracts", new { area = "" }, null)</li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+
+
+
+    <section id="main-content">
+        <section class="wrapper">
+            @RenderBody()
+        </section>
+    </section>
+
+
+    <footer class="site-footer navbar-fixed-bottom">
+        <div class="text-center">
+            2019 - Website bất động sản PPC
+            <a href="#" class="go-top">
+                <i class="icon-angle-up"></i>
+            </a>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="~/Scripts/jquery.scrollTo.min.js"></script>
+    <script src="~/Scripts/jquery.nicescroll.js"></script>
+    <script src="~/Scripts/jquery.dataTables.js"></script>
+    <script src="~/Scripts/DT_bootstrap.js"></script>
+    <script src="~/Scripts/common-scripts.js"></script>
+    <script src="~/Scripts/editable-table.js"></script>
+    @RenderSection("scripts", required: false)
+
+    <script>
+        jQuery(document).ready(function () {
+            EditableTable.init();
+        });
+    </script>
+</body>
+</html>
